@@ -1,1 +1,484 @@
-Hello world
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portafolio y hoja de vida de Cristian Iván Izaquita Morales, Desarrollador de Software y DevOps especializado en Python, Odoo ERP, .NET y arquitecturas backend.">
+    <meta name="keywords"
+        content="Desarrollador de Software, DevOps, Python, Odoo ERP, .NET, C#, SQL Server, PostgreSQL, Frontend, Backend, Full Stack, Bogotá, Colombia">
+    <meta name="author" content="Cristian Iván Izaquita Morales">
+
+    <!-- Open Graph SEO -->
+    <meta property="og:title" content="Cristian Izaquita | Desarrollador de Software">
+    <meta property="og:description"
+        content="Portafolio y hoja de vida de Cristian Iván Izaquita Morales, Desarrollador de Software y DevOps especializado en Python, Odoo ERP y .NET.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/cizaquita">
+
+    <title>Cristian Izaquita | Desarrollador de Software & DevOps</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --secondary-color: #0f172a;
+            --bg-color: #f8fafc;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* Header / Hero Section */
+        header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 16px 16px 0 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.025em;
+        }
+
+        header h2 {
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: #94a3b8;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
+
+        .contact-info a,
+        .contact-info span {
+            color: #bae6fd;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.2s;
+        }
+
+        .contact-info a:hover {
+            color: #ffffff;
+        }
+
+        /* Main Content Styling */
+        main {
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: 0 0 16px 16px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        }
+
+        section {
+            margin-bottom: 3.5rem;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        section h3 {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        section h3::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background-color: var(--border-color);
+            margin-left: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* Experience & Projects */
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2.5rem;
+            border-left: 2px solid var(--border-color);
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -6px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 0.25rem;
+        }
+
+        .item-header h4 {
+            font-size: 1.25rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .item-header .date {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 500;
+            background: #eff6ff;
+            padding: 0.2rem 0.6rem;
+            border-radius: 9999px;
+        }
+
+        .company-info {
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .company {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .boss {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-left: 0.5rem;
+        }
+
+        .boss::before {
+            content: "• ";
+        }
+
+        ul.tasks {
+            list-style-type: none;
+        }
+
+        ul.tasks li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        ul.tasks li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Education */
+        .education-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .education-row {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1rem;
+            background-color: var(--bg-color);
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .education-row:hover {
+            transform: translateX(5px);
+        }
+
+        .education-row .year {
+            font-weight: 600;
+            color: var(--primary-color);
+            min-width: 50px;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 3rem 1.5rem;
+            }
+
+            main {
+                padding: 2rem 1.5rem;
+            }
+
+            .item-header {
+                flex-direction: column;
+            }
+
+            .item-header .date {
+                margin-top: 0.5rem;
+                display: inline-block;
+            }
+
+            .boss {
+                display: block;
+                margin-left: 0;
+            }
+
+            .boss::before {
+                content: "";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Cristian Iván Izaquita Morales</h1>
+            <h2>Desarrollador de Software | DevOps | Full Stack</h2>
+            <div class="contact-info">
+                <span>📍 Bogotá, Colombia</span>
+                <a href="https://github.com/cizaquita" target="_blank">💻 github.com/cizaquita</a>
+            </div>
+        </header>
+
+        <main>
+            <section id="perfil">
+                <h3>Perfil Profesional</h3>
+                <p>
+                    Desarrollador de software con estudios en Ingeniería de Sistemas adquiridos en la Universidad El
+                    Bosque. Poseo experiencia sólida en desarrollo web y móvil utilizando tecnologías Microsoft como
+                    .NET, .NET Core y ASP Clásico, así como en Python con los web frameworks Django y Odoo. Manejo bases
+                    de datos relacionales como Oracle, MySQL/MariaDB, PostgreSQL y SQL Server, además de bases de datos
+                    NoSQL como MongoDB.
+                </p>
+                <p>
+                    Tengo conocimientos avanzados en desarrollo frontend y backend, con competencias en JavaScript,
+                    jQuery, AJAX, Bootstrap, Node.js, Angular y TypeScript. Me especializo en la creación de sistemas de
+                    información robustos y escalables, integrando tecnologías emergentes e inteligencia artificial.
+                </p>
+                <p>
+                    Apasionado por el aprendizaje continuo, me mantengo actualizado en el uso de marcos de desarrollo
+                    ágiles y metodologías colaborativas. Mi enfoque autodidacta me permite adaptarme rápidamente a
+                    nuevas herramientas y tendencias tecnológicas.
+                </p>
+            </section>
+
+            <section id="experiencia">
+                <h3>Experiencia Laboral</h3>
+
+                <div class="timeline-item">
+                    <div class="item-header">
+                        <h4>Desarrollador Odoo ERP</h4>
+                        <span class="date">Feb 2025 – Jul 2026</span>
+                    </div>
+                    <div class="company-info">
+                        <span class="company">Consultix S.A.S</span>
+                        <span class="boss">Jefe Inmediato: Wilfredo Moreno García</span>
+                    </div>
+                    <ul class="tasks">
+                        <li>Desarrollar, personalizar, mantener y optimizar soluciones basadas en Odoo ERP.</li>
+                        <li>Asegurar la correcta integración entre frontend y backend.</li>
+                        <li>Garantizar el cumplimiento de los requerimientos del negocio, y velar por la estabilidad,
+                            escalabilidad y seguridad de las aplicaciones.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="item-header">
+                        <h4>Ingeniero Intermedio</h4>
+                        <span class="date">May 2019 – Feb 2025</span>
+                    </div>
+                    <div class="company-info">
+                        <span class="company">Xphera Group S.A.S.</span>
+                        <span class="boss">Jefe Inmediato: Ricardo Arturo Lora Figueroa</span>
+                    </div>
+                    <ul class="tasks">
+                        <li>Desarrollo y mejora de aplicaciones utilizando lenguajes como C# en .NET MVC, .NET Core,
+                            VB.NET y Angular.</li>
+                        <li>Outsourcing en la Fundación Santa Fé enfocado en la mejora y mantenimiento del aplicativo de
+                            Seguimientos Ambulatorios y Oncología, integrando conocimientos básicos en HL7.</li>
+                        <li>Creación y optimización de funciones y procedimientos almacenados en bases de datos como
+                            Oracle (PL/SQL) y Microsoft SQL Server.</li>
+                        <li>Responsabilidad en la mitigación de errores y desarrollo de nuevas funcionalidades para
+                            aplicaciones del Servicio Público de Empleo utilizando C# (MVC) y aplicaciones híbridas de
+                            escritorio con Node.js, Angular 2 y NW.js.</li>
+                        <li>Migración de una plataforma de C# a una arquitectura de microservicios en .NET Core,
+                            utilizando Angular como frontend.</li>
+                        <li>Desarrollo de módulos para Odoo ERP con Python en áreas de mantenimiento, reparaciones,
+                            construcción, inventario y presupuesto público.</li>
+                        <li>Liderazgo en el desarrollo a la medida de un módulo especializado para la construcción y
+                            dotación de centros médicos en Odoo ERP.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="item-header">
+                        <h4>Desarrollador Junior II</h4>
+                        <span class="date">Abr 2018 – Dic 2018</span>
+                    </div>
+                    <div class="company-info">
+                        <span class="company">Sincosoft Sinco Comunicaciones S.A.S.</span>
+                        <span class="boss">Jefe Inmediato: Andrés Ricardo Peña Aguilera</span>
+                    </div>
+                    <ul class="tasks">
+                        <li>Participación en el desarrollo y mejora del ERP Sinco, en el módulo de Gestión de Talento
+                            Humano (GTH).</li>
+                        <li>Migración y actualización de páginas web de ASP Clásico a .NET para mejorar funcionalidad y
+                            UX.</li>
+                        <li>Desarrollo de nuevas funcionalidades y mejora de las existentes para optimizar procesos del
+                            ERP.</li>
+                        <li>Creación y modificación de funciones y procedimientos almacenados en Microsoft SQL Server,
+                            incrementando el rendimiento de las aplicaciones.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="proyectos">
+                <h3>Experiencia Académica & Proyectos</h3>
+
+                <div class="timeline-item">
+                    <div class="item-header">
+                        <h4>Consulta Ciudadano - API Rest & App Móvil</h4>
+                        <span class="date">Periodo 2017-II</span>
+                    </div>
+                    <div class="company-info">
+                        <span class="company">Materia: Ingeniería de Software</span>
+                    </div>
+                    <p>
+                        Desarrollo de software diseñado para administrar de manera sencilla la información general de
+                        los ciudadanos a través de la cédula de ciudadanía. Permite consultar el estado de un ciudadano
+                        y el envío de peticiones a una API Rest mediante una aplicación móvil. Creado en Python con
+                        Django y Cordova para aplicaciones móviles híbridas.
+                    </p>
+                    <a href="https://github.com/cizaquita/ConsultaCiudadano" target="_blank" class="project-link">
+                        🔗 Ver código en GitHub
+                    </a>
+                </div>
+            </section>
+
+            <section id="educacion">
+                <h3>Formación Académica & Certificaciones</h3>
+                <div class="education-grid">
+                    <div class="education-row">
+                        <span class="year">2023</span>
+                        <span>Certificación en Data Science e Inteligencia Artificial, Universidad de Antioquia</span>
+                    </div>
+                    <div class="education-row">
+                        <span class="year">2023</span>
+                        <span>Certificación en Ciberseguridad, Universidad de Antioquia</span>
+                    </div>
+                    <div class="education-row">
+                        <span class="year">2023</span>
+                        <span>Certificación en Marketing Digital, Universidad de Antioquia</span>
+                    </div>
+                    <div class="education-row">
+                        <span class="year">2022</span>
+                        <span>Curso básico de Digital Project Management, Platzi</span>
+                    </div>
+                    <div class="education-row">
+                        <span class="year">2022</span>
+                        <span>Curso AZ-900: Microsoft Azure Fundamentals, Microsoft Learn</span>
+                    </div>
+                    <div class="education-row">
+                        <span class="year">2021</span>
+                        <span>Estudios en Ingeniería de Sistemas, Universidad El Bosque</span>
+                    </div>
+                    <div class="education-row">
+                        <span class="year">2013</span>
+                        <span>Desarrollo web con Django/Python, Cymetria Group S.A</span>
+                    </div>
+                    <div class="education-row">
+                        <span class="year">2013</span>
+                        <span>Diseño y desarrollo web con HTML5 y CSS3, Cymetria Group S.A</span>
+                    </div>
+                    <div class="education-row">
+                        <span class="year">2011</span>
+                        <span>Manejo de Adobe Photoshop</span>
+                    </div>
+                    <div class="education-row">
+                        <span class="year">2011</span>
+                        <span>Bachiller académico, Colegio Evangélico Luterano de Colombia</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2026 Cristian Iván Izaquita Morales.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
